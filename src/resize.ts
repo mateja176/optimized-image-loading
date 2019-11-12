@@ -1,8 +1,14 @@
 import jimp from 'jimp';
 
-jimp.read('neutron-star-collision.png').then(img =>
-  img
-    .resize(835, 546)
-    .quality(20)
-    .write('neutron-star-collision.placeholder.jpeg'),
-);
+export const resize = (imgPath: string) => {
+  const [imgName] = imgPath.match(/[^.]+(?=\.)/) || ['image'];
+
+  const placeholderImgPath = imgName.concat('.placeholder').concat('.jpeg');
+
+  return jimp.read(imgPath).then(img =>
+    img
+      .resize(835, 546)
+      .quality(20)
+      .write(placeholderImgPath),
+  );
+};
