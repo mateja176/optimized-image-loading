@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.css";
-import lambda from "./lambda.svg";
-import logo from "./logo.svg";
-import neutronStartCollision from "./neutron-star-collision.png";
+import React from 'react';
+import './App.css';
+import lambda from './lambda.svg';
+import logo from './logo.svg';
+import neutronStartCollision from './neutron-star-collision.png';
 
 const App: React.FC = () => {
   console.log(logo);
