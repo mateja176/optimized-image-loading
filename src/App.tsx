@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import lambda from "./lambda.svg";
+import logo from "./logo.svg";
+import neutronStartCollision from "./neutron-star-collision.png";
 
 const App: React.FC = () => {
+  console.log(logo);
+  console.log(lambda);
+  console.log(neutronStartCollision);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +27,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
