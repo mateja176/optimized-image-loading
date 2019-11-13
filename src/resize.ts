@@ -7,7 +7,6 @@ export const resize = (imgPath: string) => {
 
   return jimp.read(imgPath).then(img =>
     img
-      .resize(835, 546)
       .quality(20)
       .write(placeholderImgPath),
   );
