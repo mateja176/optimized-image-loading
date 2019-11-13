@@ -1,7 +1,7 @@
 import jimp from 'jimp';
 
 export const resize = (imgPath: string) => {
-  const [imgName] = imgPath.match(/[^.]+(?=\.)/) || ['image'];
+  const [, imgName] = imgPath.match(/([^./]+)\.\w+$/) || ['', 'image'];
 
   const placeholderImgPath = imgName.concat('.placeholder').concat('.jpeg');
 
